@@ -2,13 +2,8 @@ package de.koopa.lg.treewalker;
 
 import koopa.core.trees.Tree;
 import de.koopa.lg.treewalker.KoopaTreeHelper;
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
 
 public abstract class CobolBaseTreeListener<T> implements CobolTreeListener<T>{
-	private boolean isListening = true;
-	private int procedureDivisionCount = 0;
-	private static final Logger logger = LogManager.getLogger();
 
 	public CobolBaseTreeListener() {	
 	}
@@ -17,8 +12,8 @@ public abstract class CobolBaseTreeListener<T> implements CobolTreeListener<T>{
 			case "eventPointer": enter_eventPointer(tree); break;
 			case "blankClause": enter_blankClause(tree); break;
 			case "dtAtPositioning": enter_dtAtPositioning(tree); break;
-			case "screenEntryPhrase": enter_screenEntryPhrase(tree); break;
 			case "standardPhrase": enter_standardPhrase(tree); break;
+			case "screenEntryPhrase": enter_screenEntryPhrase(tree); break;
 			case "execSQLStatement": enter_execSQLStatement(tree); break;
 			case "transformStatement": enter_transformStatement(tree); break;
 			case "enableStatement": enter_enableStatement(tree); break;
@@ -29,8 +24,8 @@ public abstract class CobolBaseTreeListener<T> implements CobolTreeListener<T>{
 			case "destinationClause": enter_destinationClause(tree); break;
 			case "usingOrChainingPhrase": enter_usingOrChainingPhrase(tree); break;
 			case "fdFileDescriptionEntry": enter_fdFileDescriptionEntry(tree); break;
-			case "signType": enter_signType(tree); break;
 			case "cdName": enter_cdName(tree); break;
+			case "signType": enter_signType(tree); break;
 			case "compilerDisplayStatement": enter_compilerDisplayStatement(tree); break;
 			case "entryStatement": enter_entryStatement(tree); break;
 			case "abbreviatedConjunction": enter_abbreviatedConjunction(tree); break;
@@ -41,9 +36,9 @@ public abstract class CobolBaseTreeListener<T> implements CobolTreeListener<T>{
 			case "greaterOrEqualOp": enter_greaterOrEqualOp(tree); break;
 			case "dataDescriptionEntry_format3_and_4": enter_dataDescriptionEntry_format3_and_4(tree); break;
 			case "subtraction_format2": enter_subtraction_format2(tree); break;
-			case "beforeReportingDeclarative": enter_beforeReportingDeclarative(tree); break;
-			case "subtraction_format3": enter_subtraction_format3(tree); break;
 			case "qualifiedLinageCounter": enter_qualifiedLinageCounter(tree); break;
+			case "subtraction_format3": enter_subtraction_format3(tree); break;
+			case "beforeReportingDeclarative": enter_beforeReportingDeclarative(tree); break;
 			case "pageClause": enter_pageClause(tree); break;
 			case "subtraction_format1": enter_subtraction_format1(tree); break;
 			case "rangeExpression": enter_rangeExpression(tree); break;
@@ -57,15 +52,15 @@ public abstract class CobolBaseTreeListener<T> implements CobolTreeListener<T>{
 			case "unitPhrase": enter_unitPhrase(tree); break;
 			case "assignToClause": enter_assignToClause(tree); break;
 			case "iteratorIdParagraph": enter_iteratorIdParagraph(tree); break;
-			case "functionPrototypeIdParagraph": enter_functionPrototypeIdParagraph(tree); break;
 			case "relationSubject": enter_relationSubject(tree); break;
+			case "functionPrototypeIdParagraph": enter_functionPrototypeIdParagraph(tree); break;
 			case "endMarker": enter_endMarker(tree); break;
 			case "selectClause": enter_selectClause(tree); break;
-			case "callConvention": enter_callConvention(tree); break;
 			case "setStatement": enter_setStatement(tree); break;
+			case "callConvention": enter_callConvention(tree); break;
 			case "paragraphStart": enter_paragraphStart(tree); break;
-			case "accessModeClause": enter_accessModeClause(tree); break;
 			case "commitStatement": enter_commitStatement(tree); break;
+			case "accessModeClause": enter_accessModeClause(tree); break;
 			case "term": enter_term(tree); break;
 			case "sortStatement": enter_sortStatement(tree); break;
 			case "nestedCopyStatement": enter_nestedCopyStatement(tree); break;
@@ -84,8 +79,8 @@ public abstract class CobolBaseTreeListener<T> implements CobolTreeListener<T>{
 			case "suppressClause": enter_suppressClause(tree); break;
 			case "TOKEN_EQUAL": enter_TOKEN_EQUAL(tree); break;
 			case "timeoutPhrase": enter_timeoutPhrase(tree); break;
-			case "attributeClause": enter_attributeClause(tree); break;
 			case "parameterName": enter_parameterName(tree); break;
+			case "attributeClause": enter_attributeClause(tree); break;
 			case "redefinesClause": enter_redefinesClause(tree); break;
 			case "TOKEN_TRUE": enter_TOKEN_TRUE(tree); break;
 			case "convertPhrase": enter_convertPhrase(tree); break;
@@ -93,8 +88,8 @@ public abstract class CobolBaseTreeListener<T> implements CobolTreeListener<T>{
 			case "communicationDescriptionEntry": enter_communicationDescriptionEntry(tree); break;
 			case "screenValueClause": enter_screenValueClause(tree); break;
 			case "controlPhrase": enter_controlPhrase(tree); break;
-			case "selectStatement": enter_selectStatement(tree); break;
 			case "functionIdParagraph": enter_functionIdParagraph(tree); break;
+			case "selectStatement": enter_selectStatement(tree); break;
 			case "roundedPhrase": enter_roundedPhrase(tree); break;
 			case "dataDescriptionEntry_format2": enter_dataDescriptionEntry_format2(tree); break;
 			case "dataDescriptionEntry_format1": enter_dataDescriptionEntry_format1(tree); break;
@@ -102,8 +97,8 @@ public abstract class CobolBaseTreeListener<T> implements CobolTreeListener<T>{
 			case "unlockStatement": enter_unlockStatement(tree); break;
 			case "TOKEN_BY": enter_TOKEN_BY(tree); break;
 			case "renamesClause": enter_renamesClause(tree); break;
-			case "equalsOp": enter_equalsOp(tree); break;
 			case "useStatement": enter_useStatement(tree); break;
+			case "equalsOp": enter_equalsOp(tree); break;
 			case "commentEntry": enter_commentEntry(tree); break;
 			case "setOther": enter_setOther(tree); break;
 			case "classCondition": enter_classCondition(tree); break;
@@ -117,10 +112,10 @@ public abstract class CobolBaseTreeListener<T> implements CobolTreeListener<T>{
 			case "addition_format1": enter_addition_format1(tree); break;
 			case "reverseVideoClause": enter_reverseVideoClause(tree); break;
 			case "relationOperand": enter_relationOperand(tree); break;
-			case "notAtEnd": enter_notAtEnd(tree); break;
 			case "identifiedByStatement": enter_identifiedByStatement(tree); break;
-			case "alterationClause": enter_alterationClause(tree); break;
+			case "notAtEnd": enter_notAtEnd(tree); break;
 			case "notOnSizeError": enter_notOnSizeError(tree); break;
+			case "alterationClause": enter_alterationClause(tree); break;
 			case "blankPhrase": enter_blankPhrase(tree); break;
 			case "TOKEN_AND": enter_TOKEN_AND(tree); break;
 			case "addition_format3": enter_addition_format3(tree); break;
@@ -139,8 +134,8 @@ public abstract class CobolBaseTreeListener<T> implements CobolTreeListener<T>{
 			case "retryPhrase": enter_retryPhrase(tree); break;
 			case "dataDivisionBody": enter_dataDivisionBody(tree); break;
 			case "searchStatement": enter_searchStatement(tree); break;
-			case "cursorPhrase": enter_cursorPhrase(tree); break;
 			case "promptPhrase": enter_promptPhrase(tree); break;
+			case "cursorPhrase": enter_cursorPhrase(tree); break;
 			case "TOKEN_NEGATIVE": enter_TOKEN_NEGATIVE(tree); break;
 			case "codeClause": enter_codeClause(tree); break;
 			case "valueTypeIdParagraph": enter_valueTypeIdParagraph(tree); break;
@@ -157,9 +152,9 @@ public abstract class CobolBaseTreeListener<T> implements CobolTreeListener<T>{
 			case "valueClause": enter_valueClause(tree); break;
 			case "simpleCondition": enter_simpleCondition(tree); break;
 			case "factoryParagraph": enter_factoryParagraph(tree); break;
+			case "returningPhrase": enter_returningPhrase(tree); break;
 			case "collationClause": enter_collationClause(tree); break;
 			case "sortStatusClause": enter_sortStatusClause(tree); break;
-			case "returningPhrase": enter_returningPhrase(tree); break;
 			case "interfaceSpecifier": enter_interfaceSpecifier(tree); break;
 			case "execStatement": enter_execStatement(tree); break;
 			case "sentence": enter_sentence(tree); break;
@@ -190,12 +185,12 @@ public abstract class CobolBaseTreeListener<T> implements CobolTreeListener<T>{
 			case "readyTraceStatement": enter_readyTraceStatement(tree); break;
 			case "sectionName": enter_sectionName(tree); break;
 			case "conjunction": enter_conjunction(tree); break;
-			case "objectParagraph": enter_objectParagraph(tree); break;
 			case "defaultClause": enter_defaultClause(tree); break;
+			case "objectParagraph": enter_objectParagraph(tree); break;
 			case "gobackStatement": enter_gobackStatement(tree); break;
 			case "blankWhenZeroClause": enter_blankWhenZeroClause(tree); break;
-			case "alignedClause": enter_alignedClause(tree); break;
 			case "tallyingPhrase": enter_tallyingPhrase(tree); break;
+			case "alignedClause": enter_alignedClause(tree); break;
 			case "lockModeWithClause": enter_lockModeWithClause(tree); break;
 			case "compilerDirective": enter_compilerDirective(tree); break;
 			case "eventPhrase": enter_eventPhrase(tree); break;
@@ -207,15 +202,15 @@ public abstract class CobolBaseTreeListener<T> implements CobolTreeListener<T>{
 			case "programSpecifier": enter_programSpecifier(tree); break;
 			case "atom": enter_atom(tree); break;
 			case "TOKEN_POSITIVE": enter_TOKEN_POSITIVE(tree); break;
-			case "cursorIs": enter_cursorIs(tree); break;
 			case "initiateStatement": enter_initiateStatement(tree); break;
 			case "execDLIStatement": enter_execDLIStatement(tree); break;
+			case "cursorIs": enter_cursorIs(tree); break;
 			case "negation": enter_negation(tree); break;
 			case "constant": enter_constant(tree); break;
-			case "ioSection": enter_ioSection(tree); break;
 			case "acceptScreenSizeData": enter_acceptScreenSizeData(tree); break;
-			case "subject": enter_subject(tree); break;
+			case "ioSection": enter_ioSection(tree); break;
 			case "signClause": enter_signClause(tree); break;
+			case "subject": enter_subject(tree); break;
 			case "readStatement": enter_readStatement(tree); break;
 			case "TOKEN_IS": enter_TOKEN_IS(tree); break;
 			case "integer": enter_integer(tree); break;
@@ -239,16 +234,16 @@ public abstract class CobolBaseTreeListener<T> implements CobolTreeListener<T>{
 			case "eventStatusIs": enter_eventStatusIs(tree); break;
 			case "indexName": enter_indexName(tree); break;
 			case "delegateName": enter_delegateName(tree); break;
-			case "invokeStatement": enter_invokeStatement(tree); break;
 			case "whileKeyModifier": enter_whileKeyModifier(tree); break;
+			case "invokeStatement": enter_invokeStatement(tree); break;
 			case "performStatement": enter_performStatement(tree); break;
 			case "displayStatement": enter_displayStatement(tree); break;
 			case "callPrototypeDefinition": enter_callPrototypeDefinition(tree); break;
 			case "convertingPhrase": enter_convertingPhrase(tree); break;
 			case "TOKEN_INTO": enter_TOKEN_INTO(tree); break;
 			case "standard1AlphabetType": enter_standard1AlphabetType(tree); break;
-			case "externalClause": enter_externalClause(tree); break;
 			case "condition": enter_condition(tree); break;
+			case "externalClause": enter_externalClause(tree); break;
 			case "procedureDivision": enter_procedureDivision(tree); break;
 			case "startStatement": enter_startStatement(tree); break;
 			case "recordName": enter_recordName(tree); break;
@@ -257,10 +252,10 @@ public abstract class CobolBaseTreeListener<T> implements CobolTreeListener<T>{
 			case "sizePhrase": enter_sizePhrase(tree); break;
 			case "literalValue": enter_literalValue(tree); break;
 			case "fullClause": enter_fullClause(tree); break;
-			case "controlClause": enter_controlClause(tree); break;
 			case "moveStatement": enter_moveStatement(tree); break;
-			case "recordKeyClause": enter_recordKeyClause(tree); break;
+			case "controlClause": enter_controlClause(tree); break;
 			case "configurationSection": enter_configurationSection(tree); break;
+			case "recordKeyClause": enter_recordKeyClause(tree); break;
 			case "threadLocalClause": enter_threadLocalClause(tree); break;
 			case "raiseStatement": enter_raiseStatement(tree); break;
 			case "acceptFromDate": enter_acceptFromDate(tree); break;
@@ -270,13 +265,13 @@ public abstract class CobolBaseTreeListener<T> implements CobolTreeListener<T>{
 			case "times": enter_times(tree); break;
 			case "elseBranch": enter_elseBranch(tree); break;
 			case "directSubscript": enter_directSubscript(tree); break;
-			case "footingClause": enter_footingClause(tree); break;
 			case "dependingOn": enter_dependingOn(tree); break;
+			case "footingClause": enter_footingClause(tree); break;
 			case "TOKEN_NOT": enter_TOKEN_NOT(tree); break;
 			case "relativeKeyClause": enter_relativeKeyClause(tree); break;
 			case "scrollPhrase": enter_scrollPhrase(tree); break;
-			case "environmentDivision": enter_environmentDivision(tree); break;
 			case "interfaceName": enter_interfaceName(tree); break;
+			case "environmentDivision": enter_environmentDivision(tree); break;
 			case "callUsing": enter_callUsing(tree); break;
 			case "blinkClause": enter_blinkClause(tree); break;
 			case "recordKeyDefinition": enter_recordKeyDefinition(tree); break;
@@ -292,10 +287,10 @@ public abstract class CobolBaseTreeListener<T> implements CobolTreeListener<T>{
 			case "copybookHoldingBehaviour": enter_copybookHoldingBehaviour(tree); break;
 			case "eraseClause": enter_eraseClause(tree); break;
 			case "notOnEscape": enter_notOnEscape(tree); break;
-			case "until": enter_until(tree); break;
-			case "callPrototypeIdParagraph": enter_callPrototypeIdParagraph(tree); break;
 			case "typedefClause": enter_typedefClause(tree); break;
+			case "until": enter_until(tree); break;
 			case "replacingPhrase": enter_replacingPhrase(tree); break;
+			case "callPrototypeIdParagraph": enter_callPrototypeIdParagraph(tree); break;
 			case "fillPhrase": enter_fillPhrase(tree); break;
 			case "TOKEN_REPLACING": enter_TOKEN_REPLACING(tree); break;
 			case "sourceUnit": enter_sourceUnit(tree); break;
@@ -305,8 +300,8 @@ public abstract class CobolBaseTreeListener<T> implements CobolTreeListener<T>{
 			case "compilationGroup": enter_compilationGroup(tree); break;
 			case "metadata": enter_metadata(tree); break;
 			case "cobolDevice": enter_cobolDevice(tree); break;
-			case "defaultRoundedClause": enter_defaultRoundedClause(tree); break;
 			case "screenName": enter_screenName(tree); break;
+			case "defaultRoundedClause": enter_defaultRoundedClause(tree); break;
 			case "requiredPhrase": enter_requiredPhrase(tree); break;
 			case "bitwiseExclusiveDisjunction": enter_bitwiseExclusiveDisjunction(tree); break;
 			case "execTextDataStatement": enter_execTextDataStatement(tree); break;
@@ -317,37 +312,37 @@ public abstract class CobolBaseTreeListener<T> implements CobolTreeListener<T>{
 			case "occursClause": enter_occursClause(tree); break;
 			case "replacingAllLeadingFirstOrTrailingPhrase": enter_replacingAllLeadingFirstOrTrailingPhrase(tree); break;
 			case "numericLiteral": enter_numericLiteral(tree); break;
-			case "classDefinition": enter_classDefinition(tree); break;
 			case "initializeStatement": enter_initializeStatement(tree); break;
+			case "classDefinition": enter_classDefinition(tree); break;
 			case "autoPhrase": enter_autoPhrase(tree); break;
 			case "displayTerminalFormat": enter_displayTerminalFormat(tree); break;
 			case "notOnException": enter_notOnException(tree); break;
 			case "classIs": enter_classIs(tree); break;
 			case "atEnd": enter_atEnd(tree); break;
 			case "invalidKey": enter_invalidKey(tree); break;
-			case "assignClause": enter_assignClause(tree); break;
 			case "dataValue": enter_dataValue(tree); break;
+			case "assignClause": enter_assignClause(tree); break;
 			case "propertyValue": enter_propertyValue(tree); break;
 			case "exceedsOp": enter_exceedsOp(tree); break;
 			case "functionPrototype": enter_functionPrototype(tree); break;
 			case "sourceClause": enter_sourceClause(tree); break;
 			case "alternateRecordKeyClause": enter_alternateRecordKeyClause(tree); break;
 			case "displayStatement__": enter_displayStatement__(tree); break;
-			case "consoleIsCRT": enter_consoleIsCRT(tree); break;
 			case "valuetypeName": enter_valuetypeName(tree); break;
+			case "consoleIsCRT": enter_consoleIsCRT(tree); break;
 			case "sizeModifier": enter_sizeModifier(tree); break;
 			case "recordContainsClause": enter_recordContainsClause(tree); break;
 			case "acceptFromMnemonic": enter_acceptFromMnemonic(tree); break;
 			case "linesAtTopClause": enter_linesAtTopClause(tree); break;
 			case "multiplication_format2": enter_multiplication_format2(tree); break;
 			case "multiplication_format1": enter_multiplication_format1(tree); break;
-			case "ioSectionBody": enter_ioSectionBody(tree); break;
 			case "valueTypeDefinition": enter_valueTypeDefinition(tree); break;
-			case "literalRange": enter_literalRange(tree); break;
+			case "ioSectionBody": enter_ioSectionBody(tree); break;
 			case "returnStatement": enter_returnStatement(tree); break;
 			case "arithmeticExpression": enter_arithmeticExpression(tree); break;
-			case "relop": enter_relop(tree); break;
+			case "literalRange": enter_literalRange(tree); break;
 			case "uponClause": enter_uponClause(tree); break;
+			case "relop": enter_relop(tree); break;
 			case "declarativeSection": enter_declarativeSection(tree); break;
 			case "abbreviatedNegation": enter_abbreviatedNegation(tree); break;
 			case "literal": enter_literal(tree); break;
@@ -376,8 +371,8 @@ public abstract class CobolBaseTreeListener<T> implements CobolTreeListener<T>{
 			case "division_format1": enter_division_format1(tree); break;
 			case "division_format2": enter_division_format2(tree); break;
 			case "interfaceDefinition": enter_interfaceDefinition(tree); break;
-			case "propertyName": enter_propertyName(tree); break;
 			case "mergeStatement": enter_mergeStatement(tree); break;
+			case "propertyName": enter_propertyName(tree); break;
 			case "withData": enter_withData(tree); break;
 			case "TOKEN_TO": enter_TOKEN_TO(tree); break;
 			case "recordDescriptionEntry": enter_recordDescriptionEntry(tree); break;
@@ -395,12 +390,12 @@ public abstract class CobolBaseTreeListener<T> implements CobolTreeListener<T>{
 			case "lessThanOp": enter_lessThanOp(tree); break;
 			case "screenFromClause": enter_screenFromClause(tree); break;
 			case "offPhrase": enter_offPhrase(tree); break;
-			case "fileStatusClause": enter_fileStatusClause(tree); break;
 			case "formatClause": enter_formatClause(tree); break;
+			case "fileStatusClause": enter_fileStatusClause(tree); break;
 			case "closeStatement": enter_closeStatement(tree); break;
 			case "beepPhrase": enter_beepPhrase(tree); break;
-			case "delegateDefinition": enter_delegateDefinition(tree); break;
 			case "byteLengthPhrase": enter_byteLengthPhrase(tree); break;
+			case "delegateDefinition": enter_delegateDefinition(tree); break;
 			case "exhibitStatement": enter_exhibitStatement(tree); break;
 			case "dataDivision": enter_dataDivision(tree); break;
 			case "TOKEN_FALSE": enter_TOKEN_FALSE(tree); break;
@@ -429,8 +424,8 @@ public abstract class CobolBaseTreeListener<T> implements CobolTreeListener<T>{
 			case "omittedArgumentCondition": enter_omittedArgumentCondition(tree); break;
 			case "requiredClause": enter_requiredClause(tree); break;
 			case "callGivingOrReturning": enter_callGivingOrReturning(tree); break;
-			case "environmentDivisionBody": enter_environmentDivisionBody(tree); break;
 			case "sendStatement": enter_sendStatement(tree); break;
+			case "environmentDivisionBody": enter_environmentDivisionBody(tree); break;
 			case "statement": enter_statement(tree); break;
 			case "attributeName": enter_attributeName(tree); break;
 			case "factor": enter_factor(tree); break;
@@ -445,14 +440,14 @@ public abstract class CobolBaseTreeListener<T> implements CobolTreeListener<T>{
 			case "identifier_format6": enter_identifier_format6(tree); break;
 			case "organizationClause": enter_organizationClause(tree); break;
 			case "diskClause": enter_diskClause(tree); break;
-			case "decimalIsComma": enter_decimalIsComma(tree); break;
 			case "reportGroupUsageClause": enter_reportGroupUsageClause(tree); break;
 			case "endOfStatementMarker": enter_endOfStatementMarker(tree); break;
+			case "decimalIsComma": enter_decimalIsComma(tree); break;
 			case "identifier_format1": enter_identifier_format1(tree); break;
 			case "identifier_format2": enter_identifier_format2(tree); break;
 			case "base": enter_base(tree); break;
-			case "programDefinition": enter_programDefinition(tree); break;
 			case "screenDescriptionEntry": enter_screenDescriptionEntry(tree); break;
+			case "programDefinition": enter_programDefinition(tree); break;
 			case "communicationDescriptionEntry_format2": enter_communicationDescriptionEntry_format2(tree); break;
 			case "sameAsClause": enter_sameAsClause(tree); break;
 			case "communicationDescriptionEntry_format3": enter_communicationDescriptionEntry_format3(tree); break;
@@ -460,16 +455,16 @@ public abstract class CobolBaseTreeListener<T> implements CobolTreeListener<T>{
 			case "dataRecords": enter_dataRecords(tree); break;
 			case "relationObject": enter_relationObject(tree); break;
 			case "arithmeticClause": enter_arithmeticClause(tree); break;
-			case "methodDefinition": enter_methodDefinition(tree); break;
 			case "fileDescriptionEntry": enter_fileDescriptionEntry(tree); break;
+			case "methodDefinition": enter_methodDefinition(tree); break;
 			case "when": enter_when(tree); break;
 			case "communicationDescriptionEntry_format1": enter_communicationDescriptionEntry_format1(tree); break;
 			case "capitalizationPhrase": enter_capitalizationPhrase(tree); break;
 			case "screenSection": enter_screenSection(tree); break;
 			case "optionsParagraph": enter_optionsParagraph(tree); break;
 			case "moreArithmeticOp": enter_moreArithmeticOp(tree); break;
-			case "programName": enter_programName(tree); break;
 			case "environmentName": enter_environmentName(tree); break;
+			case "programName": enter_programName(tree); break;
 			case "alterStatement": enter_alterStatement(tree); break;
 			case "stringStatement": enter_stringStatement(tree); break;
 			case "identifier": enter_identifier(tree); break;
@@ -488,43 +483,43 @@ public abstract class CobolBaseTreeListener<T> implements CobolTreeListener<T>{
 			case "openStatement": enter_openStatement(tree); break;
 			case "currencySignIs": enter_currencySignIs(tree); break;
 			case "threadPointer": enter_threadPointer(tree); break;
-			case "constraintsParagraph": enter_constraintsParagraph(tree); break;
 			case "notOnOverflow": enter_notOnOverflow(tree); break;
+			case "constraintsParagraph": enter_constraintsParagraph(tree); break;
 			case "tabPhrase": enter_tabPhrase(tree); break;
 			case "typeName": enter_typeName(tree); break;
-			case "className": enter_className(tree); break;
 			case "onException": enter_onException(tree); break;
 			case "divisionStart": enter_divisionStart(tree); break;
+			case "className": enter_className(tree); break;
 			case "segmentNumber": enter_segmentNumber(tree); break;
 			case "concatenatedLiteral": enter_concatenatedLiteral(tree); break;
 			case "securePhrase": enter_securePhrase(tree); break;
-			case "fileSection": enter_fileSection(tree); break;
 			case "computerName": enter_computerName(tree); break;
+			case "fileSection": enter_fileSection(tree); break;
 			case "factoryDefinition": enter_factoryDefinition(tree); break;
 			case "cancelStatement": enter_cancelStatement(tree); break;
 			case "procedureDivisionHeader": enter_procedureDivisionHeader(tree); break;
+			case "basedClause": enter_basedClause(tree); break;
 			case "crtStatusIs": enter_crtStatusIs(tree); break;
 			case "passwordClause": enter_passwordClause(tree); break;
-			case "basedClause": enter_basedClause(tree); break;
 			case "operatorDefinition": enter_operatorDefinition(tree); break;
 			case "generateStatement": enter_generateStatement(tree); break;
 			case "configurationSectionBody": enter_configurationSectionBody(tree); break;
 			case "programPrototypeIdParagraph": enter_programPrototypeIdParagraph(tree); break;
 			case "abbreviatedDisjunction": enter_abbreviatedDisjunction(tree); break;
 			case "TOKEN_ELSE": enter_TOKEN_ELSE(tree); break;
-			case "reportSection": enter_reportSection(tree); break;
 			case "resetTraceStatement": enter_resetTraceStatement(tree); break;
-			case "delegateIdParagraph": enter_delegateIdParagraph(tree); break;
+			case "reportSection": enter_reportSection(tree); break;
 			case "propertySpecifier": enter_propertySpecifier(tree); break;
+			case "delegateIdParagraph": enter_delegateIdParagraph(tree); break;
 			case "anyLengthClause": enter_anyLengthClause(tree); break;
 			case "symbolicChars": enter_symbolicChars(tree); break;
 			case "iteratorName": enter_iteratorName(tree); break;
 			case "multiplyStatement": enter_multiplyStatement(tree); break;
 			case "linkageSection": enter_linkageSection(tree); break;
 			case "constantEntry_level78": enter_constantEntry_level78(tree); break;
-			case "intermediateRoundingClause": enter_intermediateRoundingClause(tree); break;
 			case "screenToClause": enter_screenToClause(tree); break;
 			case "lengthPhrase": enter_lengthPhrase(tree); break;
+			case "intermediateRoundingClause": enter_intermediateRoundingClause(tree); break;
 			case "chainStatement": enter_chainStatement(tree); break;
 			case "presentWhenClause": enter_presentWhenClause(tree); break;
 			case "highPhrase": enter_highPhrase(tree); break;
@@ -544,9 +539,9 @@ public abstract class CobolBaseTreeListener<T> implements CobolTreeListener<T>{
 			case "divideStatement": enter_divideStatement(tree); break;
 			case "bitwiseConjunction": enter_bitwiseConjunction(tree); break;
 			case "propertyClause": enter_propertyClause(tree); break;
+			case "qualifiedReportCounter": enter_qualifiedReportCounter(tree); break;
 			case "valueOfFileId": enter_valueOfFileId(tree); break;
 			case "groupUsageClause": enter_groupUsageClause(tree); break;
-			case "qualifiedReportCounter": enter_qualifiedReportCounter(tree); break;
 			case "cicsStatement": enter_cicsStatement(tree); break;
 			case "classControlParagraph": enter_classControlParagraph(tree); break;
 			case "lineClause": enter_lineClause(tree); break;
@@ -569,8 +564,8 @@ public abstract class CobolBaseTreeListener<T> implements CobolTreeListener<T>{
 			case "disableStatement": enter_disableStatement(tree); break;
 			case "signCondition": enter_signCondition(tree); break;
 			case "cicsValue": enter_cicsValue(tree); break;
-			case "enumName": enter_enumName(tree); break;
 			case "compilerStatement": enter_compilerStatement(tree); break;
+			case "enumName": enter_enumName(tree); break;
 			case "classType": enter_classType(tree); break;
 			case "validateStatusClause": enter_validateStatusClause(tree); break;
 			case "lessOrEqualOp": enter_lessOrEqualOp(tree); break;
@@ -582,13 +577,13 @@ public abstract class CobolBaseTreeListener<T> implements CobolTreeListener<T>{
 			case "freeStatement": enter_freeStatement(tree); break;
 			case "replacementTarget": enter_replacementTarget(tree); break;
 			case "lowPhrase": enter_lowPhrase(tree); break;
-			case "labelRecords": enter_labelRecords(tree); break;
 			case "rewriteStatement": enter_rewriteStatement(tree); break;
+			case "labelRecords": enter_labelRecords(tree); break;
 			case "value": enter_value(tree); break;
 			case "TOKEN_EQUALS": enter_TOKEN_EQUALS(tree); break;
 			case "displayDeviceFormat": enter_displayDeviceFormat(tree); break;
-			case "releaseStatement": enter_releaseStatement(tree); break;
 			case "copyOperandName": enter_copyOperandName(tree); break;
+			case "releaseStatement": enter_releaseStatement(tree); break;
 			case "bellClause": enter_bellClause(tree); break;
 			case "methodName": enter_methodName(tree); break;
 			case "nativeAlphabetType": enter_nativeAlphabetType(tree); break;
@@ -614,8 +609,8 @@ public void exit(Tree tree) {
 			case "eventPointer": exit_eventPointer(tree); break;
 			case "blankClause": exit_blankClause(tree); break;
 			case "dtAtPositioning": exit_dtAtPositioning(tree); break;
-			case "screenEntryPhrase": exit_screenEntryPhrase(tree); break;
 			case "standardPhrase": exit_standardPhrase(tree); break;
+			case "screenEntryPhrase": exit_screenEntryPhrase(tree); break;
 			case "execSQLStatement": exit_execSQLStatement(tree); break;
 			case "transformStatement": exit_transformStatement(tree); break;
 			case "enableStatement": exit_enableStatement(tree); break;
@@ -626,8 +621,8 @@ public void exit(Tree tree) {
 			case "destinationClause": exit_destinationClause(tree); break;
 			case "usingOrChainingPhrase": exit_usingOrChainingPhrase(tree); break;
 			case "fdFileDescriptionEntry": exit_fdFileDescriptionEntry(tree); break;
-			case "signType": exit_signType(tree); break;
 			case "cdName": exit_cdName(tree); break;
+			case "signType": exit_signType(tree); break;
 			case "compilerDisplayStatement": exit_compilerDisplayStatement(tree); break;
 			case "entryStatement": exit_entryStatement(tree); break;
 			case "abbreviatedConjunction": exit_abbreviatedConjunction(tree); break;
@@ -638,9 +633,9 @@ public void exit(Tree tree) {
 			case "greaterOrEqualOp": exit_greaterOrEqualOp(tree); break;
 			case "dataDescriptionEntry_format3_and_4": exit_dataDescriptionEntry_format3_and_4(tree); break;
 			case "subtraction_format2": exit_subtraction_format2(tree); break;
-			case "beforeReportingDeclarative": exit_beforeReportingDeclarative(tree); break;
-			case "subtraction_format3": exit_subtraction_format3(tree); break;
 			case "qualifiedLinageCounter": exit_qualifiedLinageCounter(tree); break;
+			case "subtraction_format3": exit_subtraction_format3(tree); break;
+			case "beforeReportingDeclarative": exit_beforeReportingDeclarative(tree); break;
 			case "pageClause": exit_pageClause(tree); break;
 			case "subtraction_format1": exit_subtraction_format1(tree); break;
 			case "rangeExpression": exit_rangeExpression(tree); break;
@@ -654,15 +649,15 @@ public void exit(Tree tree) {
 			case "unitPhrase": exit_unitPhrase(tree); break;
 			case "assignToClause": exit_assignToClause(tree); break;
 			case "iteratorIdParagraph": exit_iteratorIdParagraph(tree); break;
-			case "functionPrototypeIdParagraph": exit_functionPrototypeIdParagraph(tree); break;
 			case "relationSubject": exit_relationSubject(tree); break;
+			case "functionPrototypeIdParagraph": exit_functionPrototypeIdParagraph(tree); break;
 			case "endMarker": exit_endMarker(tree); break;
 			case "selectClause": exit_selectClause(tree); break;
-			case "callConvention": exit_callConvention(tree); break;
 			case "setStatement": exit_setStatement(tree); break;
+			case "callConvention": exit_callConvention(tree); break;
 			case "paragraphStart": exit_paragraphStart(tree); break;
-			case "accessModeClause": exit_accessModeClause(tree); break;
 			case "commitStatement": exit_commitStatement(tree); break;
+			case "accessModeClause": exit_accessModeClause(tree); break;
 			case "term": exit_term(tree); break;
 			case "sortStatement": exit_sortStatement(tree); break;
 			case "nestedCopyStatement": exit_nestedCopyStatement(tree); break;
@@ -681,8 +676,8 @@ public void exit(Tree tree) {
 			case "suppressClause": exit_suppressClause(tree); break;
 			case "TOKEN_EQUAL": exit_TOKEN_EQUAL(tree); break;
 			case "timeoutPhrase": exit_timeoutPhrase(tree); break;
-			case "attributeClause": exit_attributeClause(tree); break;
 			case "parameterName": exit_parameterName(tree); break;
+			case "attributeClause": exit_attributeClause(tree); break;
 			case "redefinesClause": exit_redefinesClause(tree); break;
 			case "TOKEN_TRUE": exit_TOKEN_TRUE(tree); break;
 			case "convertPhrase": exit_convertPhrase(tree); break;
@@ -690,8 +685,8 @@ public void exit(Tree tree) {
 			case "communicationDescriptionEntry": exit_communicationDescriptionEntry(tree); break;
 			case "screenValueClause": exit_screenValueClause(tree); break;
 			case "controlPhrase": exit_controlPhrase(tree); break;
-			case "selectStatement": exit_selectStatement(tree); break;
 			case "functionIdParagraph": exit_functionIdParagraph(tree); break;
+			case "selectStatement": exit_selectStatement(tree); break;
 			case "roundedPhrase": exit_roundedPhrase(tree); break;
 			case "dataDescriptionEntry_format2": exit_dataDescriptionEntry_format2(tree); break;
 			case "dataDescriptionEntry_format1": exit_dataDescriptionEntry_format1(tree); break;
@@ -699,8 +694,8 @@ public void exit(Tree tree) {
 			case "unlockStatement": exit_unlockStatement(tree); break;
 			case "TOKEN_BY": exit_TOKEN_BY(tree); break;
 			case "renamesClause": exit_renamesClause(tree); break;
-			case "equalsOp": exit_equalsOp(tree); break;
 			case "useStatement": exit_useStatement(tree); break;
+			case "equalsOp": exit_equalsOp(tree); break;
 			case "commentEntry": exit_commentEntry(tree); break;
 			case "setOther": exit_setOther(tree); break;
 			case "classCondition": exit_classCondition(tree); break;
@@ -714,10 +709,10 @@ public void exit(Tree tree) {
 			case "addition_format1": exit_addition_format1(tree); break;
 			case "reverseVideoClause": exit_reverseVideoClause(tree); break;
 			case "relationOperand": exit_relationOperand(tree); break;
-			case "notAtEnd": exit_notAtEnd(tree); break;
 			case "identifiedByStatement": exit_identifiedByStatement(tree); break;
-			case "alterationClause": exit_alterationClause(tree); break;
+			case "notAtEnd": exit_notAtEnd(tree); break;
 			case "notOnSizeError": exit_notOnSizeError(tree); break;
+			case "alterationClause": exit_alterationClause(tree); break;
 			case "blankPhrase": exit_blankPhrase(tree); break;
 			case "TOKEN_AND": exit_TOKEN_AND(tree); break;
 			case "addition_format3": exit_addition_format3(tree); break;
@@ -736,8 +731,8 @@ public void exit(Tree tree) {
 			case "retryPhrase": exit_retryPhrase(tree); break;
 			case "dataDivisionBody": exit_dataDivisionBody(tree); break;
 			case "searchStatement": exit_searchStatement(tree); break;
-			case "cursorPhrase": exit_cursorPhrase(tree); break;
 			case "promptPhrase": exit_promptPhrase(tree); break;
+			case "cursorPhrase": exit_cursorPhrase(tree); break;
 			case "TOKEN_NEGATIVE": exit_TOKEN_NEGATIVE(tree); break;
 			case "codeClause": exit_codeClause(tree); break;
 			case "valueTypeIdParagraph": exit_valueTypeIdParagraph(tree); break;
@@ -754,9 +749,9 @@ public void exit(Tree tree) {
 			case "valueClause": exit_valueClause(tree); break;
 			case "simpleCondition": exit_simpleCondition(tree); break;
 			case "factoryParagraph": exit_factoryParagraph(tree); break;
+			case "returningPhrase": exit_returningPhrase(tree); break;
 			case "collationClause": exit_collationClause(tree); break;
 			case "sortStatusClause": exit_sortStatusClause(tree); break;
-			case "returningPhrase": exit_returningPhrase(tree); break;
 			case "interfaceSpecifier": exit_interfaceSpecifier(tree); break;
 			case "execStatement": exit_execStatement(tree); break;
 			case "sentence": exit_sentence(tree); break;
@@ -787,12 +782,12 @@ public void exit(Tree tree) {
 			case "readyTraceStatement": exit_readyTraceStatement(tree); break;
 			case "sectionName": exit_sectionName(tree); break;
 			case "conjunction": exit_conjunction(tree); break;
-			case "objectParagraph": exit_objectParagraph(tree); break;
 			case "defaultClause": exit_defaultClause(tree); break;
+			case "objectParagraph": exit_objectParagraph(tree); break;
 			case "gobackStatement": exit_gobackStatement(tree); break;
 			case "blankWhenZeroClause": exit_blankWhenZeroClause(tree); break;
-			case "alignedClause": exit_alignedClause(tree); break;
 			case "tallyingPhrase": exit_tallyingPhrase(tree); break;
+			case "alignedClause": exit_alignedClause(tree); break;
 			case "lockModeWithClause": exit_lockModeWithClause(tree); break;
 			case "compilerDirective": exit_compilerDirective(tree); break;
 			case "eventPhrase": exit_eventPhrase(tree); break;
@@ -804,15 +799,15 @@ public void exit(Tree tree) {
 			case "programSpecifier": exit_programSpecifier(tree); break;
 			case "atom": exit_atom(tree); break;
 			case "TOKEN_POSITIVE": exit_TOKEN_POSITIVE(tree); break;
-			case "cursorIs": exit_cursorIs(tree); break;
 			case "initiateStatement": exit_initiateStatement(tree); break;
 			case "execDLIStatement": exit_execDLIStatement(tree); break;
+			case "cursorIs": exit_cursorIs(tree); break;
 			case "negation": exit_negation(tree); break;
 			case "constant": exit_constant(tree); break;
-			case "ioSection": exit_ioSection(tree); break;
 			case "acceptScreenSizeData": exit_acceptScreenSizeData(tree); break;
-			case "subject": exit_subject(tree); break;
+			case "ioSection": exit_ioSection(tree); break;
 			case "signClause": exit_signClause(tree); break;
+			case "subject": exit_subject(tree); break;
 			case "readStatement": exit_readStatement(tree); break;
 			case "TOKEN_IS": exit_TOKEN_IS(tree); break;
 			case "integer": exit_integer(tree); break;
@@ -836,16 +831,16 @@ public void exit(Tree tree) {
 			case "eventStatusIs": exit_eventStatusIs(tree); break;
 			case "indexName": exit_indexName(tree); break;
 			case "delegateName": exit_delegateName(tree); break;
-			case "invokeStatement": exit_invokeStatement(tree); break;
 			case "whileKeyModifier": exit_whileKeyModifier(tree); break;
+			case "invokeStatement": exit_invokeStatement(tree); break;
 			case "performStatement": exit_performStatement(tree); break;
 			case "displayStatement": exit_displayStatement(tree); break;
 			case "callPrototypeDefinition": exit_callPrototypeDefinition(tree); break;
 			case "convertingPhrase": exit_convertingPhrase(tree); break;
 			case "TOKEN_INTO": exit_TOKEN_INTO(tree); break;
 			case "standard1AlphabetType": exit_standard1AlphabetType(tree); break;
-			case "externalClause": exit_externalClause(tree); break;
 			case "condition": exit_condition(tree); break;
+			case "externalClause": exit_externalClause(tree); break;
 			case "procedureDivision": exit_procedureDivision(tree); break;
 			case "startStatement": exit_startStatement(tree); break;
 			case "recordName": exit_recordName(tree); break;
@@ -854,10 +849,10 @@ public void exit(Tree tree) {
 			case "sizePhrase": exit_sizePhrase(tree); break;
 			case "literalValue": exit_literalValue(tree); break;
 			case "fullClause": exit_fullClause(tree); break;
-			case "controlClause": exit_controlClause(tree); break;
 			case "moveStatement": exit_moveStatement(tree); break;
-			case "recordKeyClause": exit_recordKeyClause(tree); break;
+			case "controlClause": exit_controlClause(tree); break;
 			case "configurationSection": exit_configurationSection(tree); break;
+			case "recordKeyClause": exit_recordKeyClause(tree); break;
 			case "threadLocalClause": exit_threadLocalClause(tree); break;
 			case "raiseStatement": exit_raiseStatement(tree); break;
 			case "acceptFromDate": exit_acceptFromDate(tree); break;
@@ -867,13 +862,13 @@ public void exit(Tree tree) {
 			case "times": exit_times(tree); break;
 			case "elseBranch": exit_elseBranch(tree); break;
 			case "directSubscript": exit_directSubscript(tree); break;
-			case "footingClause": exit_footingClause(tree); break;
 			case "dependingOn": exit_dependingOn(tree); break;
+			case "footingClause": exit_footingClause(tree); break;
 			case "TOKEN_NOT": exit_TOKEN_NOT(tree); break;
 			case "relativeKeyClause": exit_relativeKeyClause(tree); break;
 			case "scrollPhrase": exit_scrollPhrase(tree); break;
-			case "environmentDivision": exit_environmentDivision(tree); break;
 			case "interfaceName": exit_interfaceName(tree); break;
+			case "environmentDivision": exit_environmentDivision(tree); break;
 			case "callUsing": exit_callUsing(tree); break;
 			case "blinkClause": exit_blinkClause(tree); break;
 			case "recordKeyDefinition": exit_recordKeyDefinition(tree); break;
@@ -889,10 +884,10 @@ public void exit(Tree tree) {
 			case "copybookHoldingBehaviour": exit_copybookHoldingBehaviour(tree); break;
 			case "eraseClause": exit_eraseClause(tree); break;
 			case "notOnEscape": exit_notOnEscape(tree); break;
-			case "until": exit_until(tree); break;
-			case "callPrototypeIdParagraph": exit_callPrototypeIdParagraph(tree); break;
 			case "typedefClause": exit_typedefClause(tree); break;
+			case "until": exit_until(tree); break;
 			case "replacingPhrase": exit_replacingPhrase(tree); break;
+			case "callPrototypeIdParagraph": exit_callPrototypeIdParagraph(tree); break;
 			case "fillPhrase": exit_fillPhrase(tree); break;
 			case "TOKEN_REPLACING": exit_TOKEN_REPLACING(tree); break;
 			case "sourceUnit": exit_sourceUnit(tree); break;
@@ -902,8 +897,8 @@ public void exit(Tree tree) {
 			case "compilationGroup": exit_compilationGroup(tree); break;
 			case "metadata": exit_metadata(tree); break;
 			case "cobolDevice": exit_cobolDevice(tree); break;
-			case "defaultRoundedClause": exit_defaultRoundedClause(tree); break;
 			case "screenName": exit_screenName(tree); break;
+			case "defaultRoundedClause": exit_defaultRoundedClause(tree); break;
 			case "requiredPhrase": exit_requiredPhrase(tree); break;
 			case "bitwiseExclusiveDisjunction": exit_bitwiseExclusiveDisjunction(tree); break;
 			case "execTextDataStatement": exit_execTextDataStatement(tree); break;
@@ -914,37 +909,37 @@ public void exit(Tree tree) {
 			case "occursClause": exit_occursClause(tree); break;
 			case "replacingAllLeadingFirstOrTrailingPhrase": exit_replacingAllLeadingFirstOrTrailingPhrase(tree); break;
 			case "numericLiteral": exit_numericLiteral(tree); break;
-			case "classDefinition": exit_classDefinition(tree); break;
 			case "initializeStatement": exit_initializeStatement(tree); break;
+			case "classDefinition": exit_classDefinition(tree); break;
 			case "autoPhrase": exit_autoPhrase(tree); break;
 			case "displayTerminalFormat": exit_displayTerminalFormat(tree); break;
 			case "notOnException": exit_notOnException(tree); break;
 			case "classIs": exit_classIs(tree); break;
 			case "atEnd": exit_atEnd(tree); break;
 			case "invalidKey": exit_invalidKey(tree); break;
-			case "assignClause": exit_assignClause(tree); break;
 			case "dataValue": exit_dataValue(tree); break;
+			case "assignClause": exit_assignClause(tree); break;
 			case "propertyValue": exit_propertyValue(tree); break;
 			case "exceedsOp": exit_exceedsOp(tree); break;
 			case "functionPrototype": exit_functionPrototype(tree); break;
 			case "sourceClause": exit_sourceClause(tree); break;
 			case "alternateRecordKeyClause": exit_alternateRecordKeyClause(tree); break;
 			case "displayStatement__": exit_displayStatement__(tree); break;
-			case "consoleIsCRT": exit_consoleIsCRT(tree); break;
 			case "valuetypeName": exit_valuetypeName(tree); break;
+			case "consoleIsCRT": exit_consoleIsCRT(tree); break;
 			case "sizeModifier": exit_sizeModifier(tree); break;
 			case "recordContainsClause": exit_recordContainsClause(tree); break;
 			case "acceptFromMnemonic": exit_acceptFromMnemonic(tree); break;
 			case "linesAtTopClause": exit_linesAtTopClause(tree); break;
 			case "multiplication_format2": exit_multiplication_format2(tree); break;
 			case "multiplication_format1": exit_multiplication_format1(tree); break;
-			case "ioSectionBody": exit_ioSectionBody(tree); break;
 			case "valueTypeDefinition": exit_valueTypeDefinition(tree); break;
-			case "literalRange": exit_literalRange(tree); break;
+			case "ioSectionBody": exit_ioSectionBody(tree); break;
 			case "returnStatement": exit_returnStatement(tree); break;
 			case "arithmeticExpression": exit_arithmeticExpression(tree); break;
-			case "relop": exit_relop(tree); break;
+			case "literalRange": exit_literalRange(tree); break;
 			case "uponClause": exit_uponClause(tree); break;
+			case "relop": exit_relop(tree); break;
 			case "declarativeSection": exit_declarativeSection(tree); break;
 			case "abbreviatedNegation": exit_abbreviatedNegation(tree); break;
 			case "literal": exit_literal(tree); break;
@@ -973,8 +968,8 @@ public void exit(Tree tree) {
 			case "division_format1": exit_division_format1(tree); break;
 			case "division_format2": exit_division_format2(tree); break;
 			case "interfaceDefinition": exit_interfaceDefinition(tree); break;
-			case "propertyName": exit_propertyName(tree); break;
 			case "mergeStatement": exit_mergeStatement(tree); break;
+			case "propertyName": exit_propertyName(tree); break;
 			case "withData": exit_withData(tree); break;
 			case "TOKEN_TO": exit_TOKEN_TO(tree); break;
 			case "recordDescriptionEntry": exit_recordDescriptionEntry(tree); break;
@@ -992,12 +987,12 @@ public void exit(Tree tree) {
 			case "lessThanOp": exit_lessThanOp(tree); break;
 			case "screenFromClause": exit_screenFromClause(tree); break;
 			case "offPhrase": exit_offPhrase(tree); break;
-			case "fileStatusClause": exit_fileStatusClause(tree); break;
 			case "formatClause": exit_formatClause(tree); break;
+			case "fileStatusClause": exit_fileStatusClause(tree); break;
 			case "closeStatement": exit_closeStatement(tree); break;
 			case "beepPhrase": exit_beepPhrase(tree); break;
-			case "delegateDefinition": exit_delegateDefinition(tree); break;
 			case "byteLengthPhrase": exit_byteLengthPhrase(tree); break;
+			case "delegateDefinition": exit_delegateDefinition(tree); break;
 			case "exhibitStatement": exit_exhibitStatement(tree); break;
 			case "dataDivision": exit_dataDivision(tree); break;
 			case "TOKEN_FALSE": exit_TOKEN_FALSE(tree); break;
@@ -1026,8 +1021,8 @@ public void exit(Tree tree) {
 			case "omittedArgumentCondition": exit_omittedArgumentCondition(tree); break;
 			case "requiredClause": exit_requiredClause(tree); break;
 			case "callGivingOrReturning": exit_callGivingOrReturning(tree); break;
-			case "environmentDivisionBody": exit_environmentDivisionBody(tree); break;
 			case "sendStatement": exit_sendStatement(tree); break;
+			case "environmentDivisionBody": exit_environmentDivisionBody(tree); break;
 			case "statement": exit_statement(tree); break;
 			case "attributeName": exit_attributeName(tree); break;
 			case "factor": exit_factor(tree); break;
@@ -1042,14 +1037,14 @@ public void exit(Tree tree) {
 			case "identifier_format6": exit_identifier_format6(tree); break;
 			case "organizationClause": exit_organizationClause(tree); break;
 			case "diskClause": exit_diskClause(tree); break;
-			case "decimalIsComma": exit_decimalIsComma(tree); break;
 			case "reportGroupUsageClause": exit_reportGroupUsageClause(tree); break;
 			case "endOfStatementMarker": exit_endOfStatementMarker(tree); break;
+			case "decimalIsComma": exit_decimalIsComma(tree); break;
 			case "identifier_format1": exit_identifier_format1(tree); break;
 			case "identifier_format2": exit_identifier_format2(tree); break;
 			case "base": exit_base(tree); break;
-			case "programDefinition": exit_programDefinition(tree); break;
 			case "screenDescriptionEntry": exit_screenDescriptionEntry(tree); break;
+			case "programDefinition": exit_programDefinition(tree); break;
 			case "communicationDescriptionEntry_format2": exit_communicationDescriptionEntry_format2(tree); break;
 			case "sameAsClause": exit_sameAsClause(tree); break;
 			case "communicationDescriptionEntry_format3": exit_communicationDescriptionEntry_format3(tree); break;
@@ -1057,16 +1052,16 @@ public void exit(Tree tree) {
 			case "dataRecords": exit_dataRecords(tree); break;
 			case "relationObject": exit_relationObject(tree); break;
 			case "arithmeticClause": exit_arithmeticClause(tree); break;
-			case "methodDefinition": exit_methodDefinition(tree); break;
 			case "fileDescriptionEntry": exit_fileDescriptionEntry(tree); break;
+			case "methodDefinition": exit_methodDefinition(tree); break;
 			case "when": exit_when(tree); break;
 			case "communicationDescriptionEntry_format1": exit_communicationDescriptionEntry_format1(tree); break;
 			case "capitalizationPhrase": exit_capitalizationPhrase(tree); break;
 			case "screenSection": exit_screenSection(tree); break;
 			case "optionsParagraph": exit_optionsParagraph(tree); break;
 			case "moreArithmeticOp": exit_moreArithmeticOp(tree); break;
-			case "programName": exit_programName(tree); break;
 			case "environmentName": exit_environmentName(tree); break;
+			case "programName": exit_programName(tree); break;
 			case "alterStatement": exit_alterStatement(tree); break;
 			case "stringStatement": exit_stringStatement(tree); break;
 			case "identifier": exit_identifier(tree); break;
@@ -1085,43 +1080,43 @@ public void exit(Tree tree) {
 			case "openStatement": exit_openStatement(tree); break;
 			case "currencySignIs": exit_currencySignIs(tree); break;
 			case "threadPointer": exit_threadPointer(tree); break;
-			case "constraintsParagraph": exit_constraintsParagraph(tree); break;
 			case "notOnOverflow": exit_notOnOverflow(tree); break;
+			case "constraintsParagraph": exit_constraintsParagraph(tree); break;
 			case "tabPhrase": exit_tabPhrase(tree); break;
 			case "typeName": exit_typeName(tree); break;
-			case "className": exit_className(tree); break;
 			case "onException": exit_onException(tree); break;
 			case "divisionStart": exit_divisionStart(tree); break;
+			case "className": exit_className(tree); break;
 			case "segmentNumber": exit_segmentNumber(tree); break;
 			case "concatenatedLiteral": exit_concatenatedLiteral(tree); break;
 			case "securePhrase": exit_securePhrase(tree); break;
-			case "fileSection": exit_fileSection(tree); break;
 			case "computerName": exit_computerName(tree); break;
+			case "fileSection": exit_fileSection(tree); break;
 			case "factoryDefinition": exit_factoryDefinition(tree); break;
 			case "cancelStatement": exit_cancelStatement(tree); break;
 			case "procedureDivisionHeader": exit_procedureDivisionHeader(tree); break;
+			case "basedClause": exit_basedClause(tree); break;
 			case "crtStatusIs": exit_crtStatusIs(tree); break;
 			case "passwordClause": exit_passwordClause(tree); break;
-			case "basedClause": exit_basedClause(tree); break;
 			case "operatorDefinition": exit_operatorDefinition(tree); break;
 			case "generateStatement": exit_generateStatement(tree); break;
 			case "configurationSectionBody": exit_configurationSectionBody(tree); break;
 			case "programPrototypeIdParagraph": exit_programPrototypeIdParagraph(tree); break;
 			case "abbreviatedDisjunction": exit_abbreviatedDisjunction(tree); break;
 			case "TOKEN_ELSE": exit_TOKEN_ELSE(tree); break;
-			case "reportSection": exit_reportSection(tree); break;
 			case "resetTraceStatement": exit_resetTraceStatement(tree); break;
-			case "delegateIdParagraph": exit_delegateIdParagraph(tree); break;
+			case "reportSection": exit_reportSection(tree); break;
 			case "propertySpecifier": exit_propertySpecifier(tree); break;
+			case "delegateIdParagraph": exit_delegateIdParagraph(tree); break;
 			case "anyLengthClause": exit_anyLengthClause(tree); break;
 			case "symbolicChars": exit_symbolicChars(tree); break;
 			case "iteratorName": exit_iteratorName(tree); break;
 			case "multiplyStatement": exit_multiplyStatement(tree); break;
 			case "linkageSection": exit_linkageSection(tree); break;
 			case "constantEntry_level78": exit_constantEntry_level78(tree); break;
-			case "intermediateRoundingClause": exit_intermediateRoundingClause(tree); break;
 			case "screenToClause": exit_screenToClause(tree); break;
 			case "lengthPhrase": exit_lengthPhrase(tree); break;
+			case "intermediateRoundingClause": exit_intermediateRoundingClause(tree); break;
 			case "chainStatement": exit_chainStatement(tree); break;
 			case "presentWhenClause": exit_presentWhenClause(tree); break;
 			case "highPhrase": exit_highPhrase(tree); break;
@@ -1141,9 +1136,9 @@ public void exit(Tree tree) {
 			case "divideStatement": exit_divideStatement(tree); break;
 			case "bitwiseConjunction": exit_bitwiseConjunction(tree); break;
 			case "propertyClause": exit_propertyClause(tree); break;
+			case "qualifiedReportCounter": exit_qualifiedReportCounter(tree); break;
 			case "valueOfFileId": exit_valueOfFileId(tree); break;
 			case "groupUsageClause": exit_groupUsageClause(tree); break;
-			case "qualifiedReportCounter": exit_qualifiedReportCounter(tree); break;
 			case "cicsStatement": exit_cicsStatement(tree); break;
 			case "classControlParagraph": exit_classControlParagraph(tree); break;
 			case "lineClause": exit_lineClause(tree); break;
@@ -1166,8 +1161,8 @@ public void exit(Tree tree) {
 			case "disableStatement": exit_disableStatement(tree); break;
 			case "signCondition": exit_signCondition(tree); break;
 			case "cicsValue": exit_cicsValue(tree); break;
-			case "enumName": exit_enumName(tree); break;
 			case "compilerStatement": exit_compilerStatement(tree); break;
+			case "enumName": exit_enumName(tree); break;
 			case "classType": exit_classType(tree); break;
 			case "validateStatusClause": exit_validateStatusClause(tree); break;
 			case "lessOrEqualOp": exit_lessOrEqualOp(tree); break;
@@ -1179,13 +1174,13 @@ public void exit(Tree tree) {
 			case "freeStatement": exit_freeStatement(tree); break;
 			case "replacementTarget": exit_replacementTarget(tree); break;
 			case "lowPhrase": exit_lowPhrase(tree); break;
-			case "labelRecords": exit_labelRecords(tree); break;
 			case "rewriteStatement": exit_rewriteStatement(tree); break;
+			case "labelRecords": exit_labelRecords(tree); break;
 			case "value": exit_value(tree); break;
 			case "TOKEN_EQUALS": exit_TOKEN_EQUALS(tree); break;
 			case "displayDeviceFormat": exit_displayDeviceFormat(tree); break;
-			case "releaseStatement": exit_releaseStatement(tree); break;
 			case "copyOperandName": exit_copyOperandName(tree); break;
+			case "releaseStatement": exit_releaseStatement(tree); break;
 			case "bellClause": exit_bellClause(tree); break;
 			case "methodName": exit_methodName(tree); break;
 			case "nativeAlphabetType": exit_nativeAlphabetType(tree); break;
@@ -1205,16 +1200,6 @@ public void exit(Tree tree) {
 			default: return;
 		}
 	}
-	protected void checkProcedureDivisionCount() {
-		procedureDivisionCount++;
-		if (procedureDivisionCount > 1) {
-			isListening = false;
-		}
-	}
-	public boolean isListening() {
-		return isListening;
-	}
-
 
 	public void enter_eventPointer(Tree tree) { }
 	public void exit_eventPointer(Tree tree) { }
@@ -1222,10 +1207,10 @@ public void exit(Tree tree) {
 	public void exit_blankClause(Tree tree) { }
 	public void enter_dtAtPositioning(Tree tree) { }
 	public void exit_dtAtPositioning(Tree tree) { }
-	public void enter_screenEntryPhrase(Tree tree) { }
-	public void exit_screenEntryPhrase(Tree tree) { }
 	public void enter_standardPhrase(Tree tree) { }
 	public void exit_standardPhrase(Tree tree) { }
+	public void enter_screenEntryPhrase(Tree tree) { }
+	public void exit_screenEntryPhrase(Tree tree) { }
 	public void enter_execSQLStatement(Tree tree) { }
 	public void exit_execSQLStatement(Tree tree) { }
 	public void enter_transformStatement(Tree tree) { }
@@ -1246,10 +1231,10 @@ public void exit(Tree tree) {
 	public void exit_usingOrChainingPhrase(Tree tree) { }
 	public void enter_fdFileDescriptionEntry(Tree tree) { }
 	public void exit_fdFileDescriptionEntry(Tree tree) { }
-	public void enter_signType(Tree tree) { }
-	public void exit_signType(Tree tree) { }
 	public void enter_cdName(Tree tree) { }
 	public void exit_cdName(Tree tree) { }
+	public void enter_signType(Tree tree) { }
+	public void exit_signType(Tree tree) { }
 	public void enter_compilerDisplayStatement(Tree tree) { }
 	public void exit_compilerDisplayStatement(Tree tree) { }
 	public void enter_entryStatement(Tree tree) { }
@@ -1270,12 +1255,12 @@ public void exit(Tree tree) {
 	public void exit_dataDescriptionEntry_format3_and_4(Tree tree) { }
 	public void enter_subtraction_format2(Tree tree) { }
 	public void exit_subtraction_format2(Tree tree) { }
-	public void enter_beforeReportingDeclarative(Tree tree) { }
-	public void exit_beforeReportingDeclarative(Tree tree) { }
-	public void enter_subtraction_format3(Tree tree) { }
-	public void exit_subtraction_format3(Tree tree) { }
 	public void enter_qualifiedLinageCounter(Tree tree) { }
 	public void exit_qualifiedLinageCounter(Tree tree) { }
+	public void enter_subtraction_format3(Tree tree) { }
+	public void exit_subtraction_format3(Tree tree) { }
+	public void enter_beforeReportingDeclarative(Tree tree) { }
+	public void exit_beforeReportingDeclarative(Tree tree) { }
 	public void enter_pageClause(Tree tree) { }
 	public void exit_pageClause(Tree tree) { }
 	public void enter_subtraction_format1(Tree tree) { }
@@ -1302,24 +1287,24 @@ public void exit(Tree tree) {
 	public void exit_assignToClause(Tree tree) { }
 	public void enter_iteratorIdParagraph(Tree tree) { }
 	public void exit_iteratorIdParagraph(Tree tree) { }
-	public void enter_functionPrototypeIdParagraph(Tree tree) { }
-	public void exit_functionPrototypeIdParagraph(Tree tree) { }
 	public void enter_relationSubject(Tree tree) { }
 	public void exit_relationSubject(Tree tree) { }
+	public void enter_functionPrototypeIdParagraph(Tree tree) { }
+	public void exit_functionPrototypeIdParagraph(Tree tree) { }
 	public void enter_endMarker(Tree tree) { }
 	public void exit_endMarker(Tree tree) { }
 	public void enter_selectClause(Tree tree) { }
 	public void exit_selectClause(Tree tree) { }
-	public void enter_callConvention(Tree tree) { }
-	public void exit_callConvention(Tree tree) { }
 	public void enter_setStatement(Tree tree) { }
 	public void exit_setStatement(Tree tree) { }
+	public void enter_callConvention(Tree tree) { }
+	public void exit_callConvention(Tree tree) { }
 	public void enter_paragraphStart(Tree tree) { }
 	public void exit_paragraphStart(Tree tree) { }
-	public void enter_accessModeClause(Tree tree) { }
-	public void exit_accessModeClause(Tree tree) { }
 	public void enter_commitStatement(Tree tree) { }
 	public void exit_commitStatement(Tree tree) { }
+	public void enter_accessModeClause(Tree tree) { }
+	public void exit_accessModeClause(Tree tree) { }
 	public void enter_term(Tree tree) { }
 	public void exit_term(Tree tree) { }
 	public void enter_sortStatement(Tree tree) { }
@@ -1356,10 +1341,10 @@ public void exit(Tree tree) {
 	public void exit_TOKEN_EQUAL(Tree tree) { }
 	public void enter_timeoutPhrase(Tree tree) { }
 	public void exit_timeoutPhrase(Tree tree) { }
-	public void enter_attributeClause(Tree tree) { }
-	public void exit_attributeClause(Tree tree) { }
 	public void enter_parameterName(Tree tree) { }
 	public void exit_parameterName(Tree tree) { }
+	public void enter_attributeClause(Tree tree) { }
+	public void exit_attributeClause(Tree tree) { }
 	public void enter_redefinesClause(Tree tree) { }
 	public void exit_redefinesClause(Tree tree) { }
 	public void enter_TOKEN_TRUE(Tree tree) { }
@@ -1374,10 +1359,10 @@ public void exit(Tree tree) {
 	public void exit_screenValueClause(Tree tree) { }
 	public void enter_controlPhrase(Tree tree) { }
 	public void exit_controlPhrase(Tree tree) { }
-	public void enter_selectStatement(Tree tree) { }
-	public void exit_selectStatement(Tree tree) { }
 	public void enter_functionIdParagraph(Tree tree) { }
 	public void exit_functionIdParagraph(Tree tree) { }
+	public void enter_selectStatement(Tree tree) { }
+	public void exit_selectStatement(Tree tree) { }
 	public void enter_roundedPhrase(Tree tree) { }
 	public void exit_roundedPhrase(Tree tree) { }
 	public void enter_dataDescriptionEntry_format2(Tree tree) { }
@@ -1392,10 +1377,10 @@ public void exit(Tree tree) {
 	public void exit_TOKEN_BY(Tree tree) { }
 	public void enter_renamesClause(Tree tree) { }
 	public void exit_renamesClause(Tree tree) { }
-	public void enter_equalsOp(Tree tree) { }
-	public void exit_equalsOp(Tree tree) { }
 	public void enter_useStatement(Tree tree) { }
 	public void exit_useStatement(Tree tree) { }
+	public void enter_equalsOp(Tree tree) { }
+	public void exit_equalsOp(Tree tree) { }
 	public void enter_commentEntry(Tree tree) { }
 	public void exit_commentEntry(Tree tree) { }
 	public void enter_setOther(Tree tree) { }
@@ -1422,14 +1407,14 @@ public void exit(Tree tree) {
 	public void exit_reverseVideoClause(Tree tree) { }
 	public void enter_relationOperand(Tree tree) { }
 	public void exit_relationOperand(Tree tree) { }
-	public void enter_notAtEnd(Tree tree) { }
-	public void exit_notAtEnd(Tree tree) { }
 	public void enter_identifiedByStatement(Tree tree) { }
 	public void exit_identifiedByStatement(Tree tree) { }
-	public void enter_alterationClause(Tree tree) { }
-	public void exit_alterationClause(Tree tree) { }
+	public void enter_notAtEnd(Tree tree) { }
+	public void exit_notAtEnd(Tree tree) { }
 	public void enter_notOnSizeError(Tree tree) { }
 	public void exit_notOnSizeError(Tree tree) { }
+	public void enter_alterationClause(Tree tree) { }
+	public void exit_alterationClause(Tree tree) { }
 	public void enter_blankPhrase(Tree tree) { }
 	public void exit_blankPhrase(Tree tree) { }
 	public void enter_TOKEN_AND(Tree tree) { }
@@ -1466,10 +1451,10 @@ public void exit(Tree tree) {
 	public void exit_dataDivisionBody(Tree tree) { }
 	public void enter_searchStatement(Tree tree) { }
 	public void exit_searchStatement(Tree tree) { }
-	public void enter_cursorPhrase(Tree tree) { }
-	public void exit_cursorPhrase(Tree tree) { }
 	public void enter_promptPhrase(Tree tree) { }
 	public void exit_promptPhrase(Tree tree) { }
+	public void enter_cursorPhrase(Tree tree) { }
+	public void exit_cursorPhrase(Tree tree) { }
 	public void enter_TOKEN_NEGATIVE(Tree tree) { }
 	public void exit_TOKEN_NEGATIVE(Tree tree) { }
 	public void enter_codeClause(Tree tree) { }
@@ -1502,12 +1487,12 @@ public void exit(Tree tree) {
 	public void exit_simpleCondition(Tree tree) { }
 	public void enter_factoryParagraph(Tree tree) { }
 	public void exit_factoryParagraph(Tree tree) { }
+	public void enter_returningPhrase(Tree tree) { }
+	public void exit_returningPhrase(Tree tree) { }
 	public void enter_collationClause(Tree tree) { }
 	public void exit_collationClause(Tree tree) { }
 	public void enter_sortStatusClause(Tree tree) { }
 	public void exit_sortStatusClause(Tree tree) { }
-	public void enter_returningPhrase(Tree tree) { }
-	public void exit_returningPhrase(Tree tree) { }
 	public void enter_interfaceSpecifier(Tree tree) { }
 	public void exit_interfaceSpecifier(Tree tree) { }
 	public void enter_execStatement(Tree tree) { }
@@ -1568,18 +1553,18 @@ public void exit(Tree tree) {
 	public void exit_sectionName(Tree tree) { }
 	public void enter_conjunction(Tree tree) { }
 	public void exit_conjunction(Tree tree) { }
-	public void enter_objectParagraph(Tree tree) { }
-	public void exit_objectParagraph(Tree tree) { }
 	public void enter_defaultClause(Tree tree) { }
 	public void exit_defaultClause(Tree tree) { }
+	public void enter_objectParagraph(Tree tree) { }
+	public void exit_objectParagraph(Tree tree) { }
 	public void enter_gobackStatement(Tree tree) { }
 	public void exit_gobackStatement(Tree tree) { }
 	public void enter_blankWhenZeroClause(Tree tree) { }
 	public void exit_blankWhenZeroClause(Tree tree) { }
-	public void enter_alignedClause(Tree tree) { }
-	public void exit_alignedClause(Tree tree) { }
 	public void enter_tallyingPhrase(Tree tree) { }
 	public void exit_tallyingPhrase(Tree tree) { }
+	public void enter_alignedClause(Tree tree) { }
+	public void exit_alignedClause(Tree tree) { }
 	public void enter_lockModeWithClause(Tree tree) { }
 	public void exit_lockModeWithClause(Tree tree) { }
 	public void enter_compilerDirective(Tree tree) { }
@@ -1602,24 +1587,24 @@ public void exit(Tree tree) {
 	public void exit_atom(Tree tree) { }
 	public void enter_TOKEN_POSITIVE(Tree tree) { }
 	public void exit_TOKEN_POSITIVE(Tree tree) { }
-	public void enter_cursorIs(Tree tree) { }
-	public void exit_cursorIs(Tree tree) { }
 	public void enter_initiateStatement(Tree tree) { }
 	public void exit_initiateStatement(Tree tree) { }
 	public void enter_execDLIStatement(Tree tree) { }
 	public void exit_execDLIStatement(Tree tree) { }
+	public void enter_cursorIs(Tree tree) { }
+	public void exit_cursorIs(Tree tree) { }
 	public void enter_negation(Tree tree) { }
 	public void exit_negation(Tree tree) { }
 	public void enter_constant(Tree tree) { }
 	public void exit_constant(Tree tree) { }
-	public void enter_ioSection(Tree tree) { }
-	public void exit_ioSection(Tree tree) { }
 	public void enter_acceptScreenSizeData(Tree tree) { }
 	public void exit_acceptScreenSizeData(Tree tree) { }
-	public void enter_subject(Tree tree) { }
-	public void exit_subject(Tree tree) { }
+	public void enter_ioSection(Tree tree) { }
+	public void exit_ioSection(Tree tree) { }
 	public void enter_signClause(Tree tree) { }
 	public void exit_signClause(Tree tree) { }
+	public void enter_subject(Tree tree) { }
+	public void exit_subject(Tree tree) { }
 	public void enter_readStatement(Tree tree) { }
 	public void exit_readStatement(Tree tree) { }
 	public void enter_TOKEN_IS(Tree tree) { }
@@ -1666,10 +1651,10 @@ public void exit(Tree tree) {
 	public void exit_indexName(Tree tree) { }
 	public void enter_delegateName(Tree tree) { }
 	public void exit_delegateName(Tree tree) { }
-	public void enter_invokeStatement(Tree tree) { }
-	public void exit_invokeStatement(Tree tree) { }
 	public void enter_whileKeyModifier(Tree tree) { }
 	public void exit_whileKeyModifier(Tree tree) { }
+	public void enter_invokeStatement(Tree tree) { }
+	public void exit_invokeStatement(Tree tree) { }
 	public void enter_performStatement(Tree tree) { }
 	public void exit_performStatement(Tree tree) { }
 	public void enter_displayStatement(Tree tree) { }
@@ -1682,10 +1667,10 @@ public void exit(Tree tree) {
 	public void exit_TOKEN_INTO(Tree tree) { }
 	public void enter_standard1AlphabetType(Tree tree) { }
 	public void exit_standard1AlphabetType(Tree tree) { }
-	public void enter_externalClause(Tree tree) { }
-	public void exit_externalClause(Tree tree) { }
 	public void enter_condition(Tree tree) { }
 	public void exit_condition(Tree tree) { }
+	public void enter_externalClause(Tree tree) { }
+	public void exit_externalClause(Tree tree) { }
 	public void enter_procedureDivision(Tree tree) { }
 	public void exit_procedureDivision(Tree tree) { }
 	public void enter_startStatement(Tree tree) { }
@@ -1702,14 +1687,14 @@ public void exit(Tree tree) {
 	public void exit_literalValue(Tree tree) { }
 	public void enter_fullClause(Tree tree) { }
 	public void exit_fullClause(Tree tree) { }
-	public void enter_controlClause(Tree tree) { }
-	public void exit_controlClause(Tree tree) { }
 	public void enter_moveStatement(Tree tree) { }
 	public void exit_moveStatement(Tree tree) { }
-	public void enter_recordKeyClause(Tree tree) { }
-	public void exit_recordKeyClause(Tree tree) { }
+	public void enter_controlClause(Tree tree) { }
+	public void exit_controlClause(Tree tree) { }
 	public void enter_configurationSection(Tree tree) { }
 	public void exit_configurationSection(Tree tree) { }
+	public void enter_recordKeyClause(Tree tree) { }
+	public void exit_recordKeyClause(Tree tree) { }
 	public void enter_threadLocalClause(Tree tree) { }
 	public void exit_threadLocalClause(Tree tree) { }
 	public void enter_raiseStatement(Tree tree) { }
@@ -1728,20 +1713,20 @@ public void exit(Tree tree) {
 	public void exit_elseBranch(Tree tree) { }
 	public void enter_directSubscript(Tree tree) { }
 	public void exit_directSubscript(Tree tree) { }
-	public void enter_footingClause(Tree tree) { }
-	public void exit_footingClause(Tree tree) { }
 	public void enter_dependingOn(Tree tree) { }
 	public void exit_dependingOn(Tree tree) { }
+	public void enter_footingClause(Tree tree) { }
+	public void exit_footingClause(Tree tree) { }
 	public void enter_TOKEN_NOT(Tree tree) { }
 	public void exit_TOKEN_NOT(Tree tree) { }
 	public void enter_relativeKeyClause(Tree tree) { }
 	public void exit_relativeKeyClause(Tree tree) { }
 	public void enter_scrollPhrase(Tree tree) { }
 	public void exit_scrollPhrase(Tree tree) { }
-	public void enter_environmentDivision(Tree tree) { }
-	public void exit_environmentDivision(Tree tree) { }
 	public void enter_interfaceName(Tree tree) { }
 	public void exit_interfaceName(Tree tree) { }
+	public void enter_environmentDivision(Tree tree) { }
+	public void exit_environmentDivision(Tree tree) { }
 	public void enter_callUsing(Tree tree) { }
 	public void exit_callUsing(Tree tree) { }
 	public void enter_blinkClause(Tree tree) { }
@@ -1772,14 +1757,14 @@ public void exit(Tree tree) {
 	public void exit_eraseClause(Tree tree) { }
 	public void enter_notOnEscape(Tree tree) { }
 	public void exit_notOnEscape(Tree tree) { }
-	public void enter_until(Tree tree) { }
-	public void exit_until(Tree tree) { }
-	public void enter_callPrototypeIdParagraph(Tree tree) { }
-	public void exit_callPrototypeIdParagraph(Tree tree) { }
 	public void enter_typedefClause(Tree tree) { }
 	public void exit_typedefClause(Tree tree) { }
+	public void enter_until(Tree tree) { }
+	public void exit_until(Tree tree) { }
 	public void enter_replacingPhrase(Tree tree) { }
 	public void exit_replacingPhrase(Tree tree) { }
+	public void enter_callPrototypeIdParagraph(Tree tree) { }
+	public void exit_callPrototypeIdParagraph(Tree tree) { }
 	public void enter_fillPhrase(Tree tree) { }
 	public void exit_fillPhrase(Tree tree) { }
 	public void enter_TOKEN_REPLACING(Tree tree) { }
@@ -1798,10 +1783,10 @@ public void exit(Tree tree) {
 	public void exit_metadata(Tree tree) { }
 	public void enter_cobolDevice(Tree tree) { }
 	public void exit_cobolDevice(Tree tree) { }
-	public void enter_defaultRoundedClause(Tree tree) { }
-	public void exit_defaultRoundedClause(Tree tree) { }
 	public void enter_screenName(Tree tree) { }
 	public void exit_screenName(Tree tree) { }
+	public void enter_defaultRoundedClause(Tree tree) { }
+	public void exit_defaultRoundedClause(Tree tree) { }
 	public void enter_requiredPhrase(Tree tree) { }
 	public void exit_requiredPhrase(Tree tree) { }
 	public void enter_bitwiseExclusiveDisjunction(Tree tree) { }
@@ -1822,10 +1807,10 @@ public void exit(Tree tree) {
 	public void exit_replacingAllLeadingFirstOrTrailingPhrase(Tree tree) { }
 	public void enter_numericLiteral(Tree tree) { }
 	public void exit_numericLiteral(Tree tree) { }
-	public void enter_classDefinition(Tree tree) { }
-	public void exit_classDefinition(Tree tree) { }
 	public void enter_initializeStatement(Tree tree) { }
 	public void exit_initializeStatement(Tree tree) { }
+	public void enter_classDefinition(Tree tree) { }
+	public void exit_classDefinition(Tree tree) { }
 	public void enter_autoPhrase(Tree tree) { }
 	public void exit_autoPhrase(Tree tree) { }
 	public void enter_displayTerminalFormat(Tree tree) { }
@@ -1838,10 +1823,10 @@ public void exit(Tree tree) {
 	public void exit_atEnd(Tree tree) { }
 	public void enter_invalidKey(Tree tree) { }
 	public void exit_invalidKey(Tree tree) { }
-	public void enter_assignClause(Tree tree) { }
-	public void exit_assignClause(Tree tree) { }
 	public void enter_dataValue(Tree tree) { }
 	public void exit_dataValue(Tree tree) { }
+	public void enter_assignClause(Tree tree) { }
+	public void exit_assignClause(Tree tree) { }
 	public void enter_propertyValue(Tree tree) { }
 	public void exit_propertyValue(Tree tree) { }
 	public void enter_exceedsOp(Tree tree) { }
@@ -1854,10 +1839,10 @@ public void exit(Tree tree) {
 	public void exit_alternateRecordKeyClause(Tree tree) { }
 	public void enter_displayStatement__(Tree tree) { }
 	public void exit_displayStatement__(Tree tree) { }
-	public void enter_consoleIsCRT(Tree tree) { }
-	public void exit_consoleIsCRT(Tree tree) { }
 	public void enter_valuetypeName(Tree tree) { }
 	public void exit_valuetypeName(Tree tree) { }
+	public void enter_consoleIsCRT(Tree tree) { }
+	public void exit_consoleIsCRT(Tree tree) { }
 	public void enter_sizeModifier(Tree tree) { }
 	public void exit_sizeModifier(Tree tree) { }
 	public void enter_recordContainsClause(Tree tree) { }
@@ -1870,20 +1855,20 @@ public void exit(Tree tree) {
 	public void exit_multiplication_format2(Tree tree) { }
 	public void enter_multiplication_format1(Tree tree) { }
 	public void exit_multiplication_format1(Tree tree) { }
-	public void enter_ioSectionBody(Tree tree) { }
-	public void exit_ioSectionBody(Tree tree) { }
 	public void enter_valueTypeDefinition(Tree tree) { }
 	public void exit_valueTypeDefinition(Tree tree) { }
-	public void enter_literalRange(Tree tree) { }
-	public void exit_literalRange(Tree tree) { }
+	public void enter_ioSectionBody(Tree tree) { }
+	public void exit_ioSectionBody(Tree tree) { }
 	public void enter_returnStatement(Tree tree) { }
 	public void exit_returnStatement(Tree tree) { }
 	public void enter_arithmeticExpression(Tree tree) { }
 	public void exit_arithmeticExpression(Tree tree) { }
-	public void enter_relop(Tree tree) { }
-	public void exit_relop(Tree tree) { }
+	public void enter_literalRange(Tree tree) { }
+	public void exit_literalRange(Tree tree) { }
 	public void enter_uponClause(Tree tree) { }
 	public void exit_uponClause(Tree tree) { }
+	public void enter_relop(Tree tree) { }
+	public void exit_relop(Tree tree) { }
 	public void enter_declarativeSection(Tree tree) { }
 	public void exit_declarativeSection(Tree tree) { }
 	public void enter_abbreviatedNegation(Tree tree) { }
@@ -1940,10 +1925,10 @@ public void exit(Tree tree) {
 	public void exit_division_format2(Tree tree) { }
 	public void enter_interfaceDefinition(Tree tree) { }
 	public void exit_interfaceDefinition(Tree tree) { }
-	public void enter_propertyName(Tree tree) { }
-	public void exit_propertyName(Tree tree) { }
 	public void enter_mergeStatement(Tree tree) { }
 	public void exit_mergeStatement(Tree tree) { }
+	public void enter_propertyName(Tree tree) { }
+	public void exit_propertyName(Tree tree) { }
 	public void enter_withData(Tree tree) { }
 	public void exit_withData(Tree tree) { }
 	public void enter_TOKEN_TO(Tree tree) { }
@@ -1978,18 +1963,18 @@ public void exit(Tree tree) {
 	public void exit_screenFromClause(Tree tree) { }
 	public void enter_offPhrase(Tree tree) { }
 	public void exit_offPhrase(Tree tree) { }
-	public void enter_fileStatusClause(Tree tree) { }
-	public void exit_fileStatusClause(Tree tree) { }
 	public void enter_formatClause(Tree tree) { }
 	public void exit_formatClause(Tree tree) { }
+	public void enter_fileStatusClause(Tree tree) { }
+	public void exit_fileStatusClause(Tree tree) { }
 	public void enter_closeStatement(Tree tree) { }
 	public void exit_closeStatement(Tree tree) { }
 	public void enter_beepPhrase(Tree tree) { }
 	public void exit_beepPhrase(Tree tree) { }
-	public void enter_delegateDefinition(Tree tree) { }
-	public void exit_delegateDefinition(Tree tree) { }
 	public void enter_byteLengthPhrase(Tree tree) { }
 	public void exit_byteLengthPhrase(Tree tree) { }
+	public void enter_delegateDefinition(Tree tree) { }
+	public void exit_delegateDefinition(Tree tree) { }
 	public void enter_exhibitStatement(Tree tree) { }
 	public void exit_exhibitStatement(Tree tree) { }
 	public void enter_dataDivision(Tree tree) { }
@@ -2046,10 +2031,10 @@ public void exit(Tree tree) {
 	public void exit_requiredClause(Tree tree) { }
 	public void enter_callGivingOrReturning(Tree tree) { }
 	public void exit_callGivingOrReturning(Tree tree) { }
-	public void enter_environmentDivisionBody(Tree tree) { }
-	public void exit_environmentDivisionBody(Tree tree) { }
 	public void enter_sendStatement(Tree tree) { }
 	public void exit_sendStatement(Tree tree) { }
+	public void enter_environmentDivisionBody(Tree tree) { }
+	public void exit_environmentDivisionBody(Tree tree) { }
 	public void enter_statement(Tree tree) { }
 	public void exit_statement(Tree tree) { }
 	public void enter_attributeName(Tree tree) { }
@@ -2078,22 +2063,22 @@ public void exit(Tree tree) {
 	public void exit_organizationClause(Tree tree) { }
 	public void enter_diskClause(Tree tree) { }
 	public void exit_diskClause(Tree tree) { }
-	public void enter_decimalIsComma(Tree tree) { }
-	public void exit_decimalIsComma(Tree tree) { }
 	public void enter_reportGroupUsageClause(Tree tree) { }
 	public void exit_reportGroupUsageClause(Tree tree) { }
 	public void enter_endOfStatementMarker(Tree tree) { }
 	public void exit_endOfStatementMarker(Tree tree) { }
+	public void enter_decimalIsComma(Tree tree) { }
+	public void exit_decimalIsComma(Tree tree) { }
 	public void enter_identifier_format1(Tree tree) { }
 	public void exit_identifier_format1(Tree tree) { }
 	public void enter_identifier_format2(Tree tree) { }
 	public void exit_identifier_format2(Tree tree) { }
 	public void enter_base(Tree tree) { }
 	public void exit_base(Tree tree) { }
-	public void enter_programDefinition(Tree tree) { }
-	public void exit_programDefinition(Tree tree) { }
 	public void enter_screenDescriptionEntry(Tree tree) { }
 	public void exit_screenDescriptionEntry(Tree tree) { }
+	public void enter_programDefinition(Tree tree) { }
+	public void exit_programDefinition(Tree tree) { }
 	public void enter_communicationDescriptionEntry_format2(Tree tree) { }
 	public void exit_communicationDescriptionEntry_format2(Tree tree) { }
 	public void enter_sameAsClause(Tree tree) { }
@@ -2108,10 +2093,10 @@ public void exit(Tree tree) {
 	public void exit_relationObject(Tree tree) { }
 	public void enter_arithmeticClause(Tree tree) { }
 	public void exit_arithmeticClause(Tree tree) { }
-	public void enter_methodDefinition(Tree tree) { }
-	public void exit_methodDefinition(Tree tree) { }
 	public void enter_fileDescriptionEntry(Tree tree) { }
 	public void exit_fileDescriptionEntry(Tree tree) { }
+	public void enter_methodDefinition(Tree tree) { }
+	public void exit_methodDefinition(Tree tree) { }
 	public void enter_when(Tree tree) { }
 	public void exit_when(Tree tree) { }
 	public void enter_communicationDescriptionEntry_format1(Tree tree) { }
@@ -2124,10 +2109,10 @@ public void exit(Tree tree) {
 	public void exit_optionsParagraph(Tree tree) { }
 	public void enter_moreArithmeticOp(Tree tree) { }
 	public void exit_moreArithmeticOp(Tree tree) { }
-	public void enter_programName(Tree tree) { }
-	public void exit_programName(Tree tree) { }
 	public void enter_environmentName(Tree tree) { }
 	public void exit_environmentName(Tree tree) { }
+	public void enter_programName(Tree tree) { }
+	public void exit_programName(Tree tree) { }
 	public void enter_alterStatement(Tree tree) { }
 	public void exit_alterStatement(Tree tree) { }
 	public void enter_stringStatement(Tree tree) { }
@@ -2164,42 +2149,42 @@ public void exit(Tree tree) {
 	public void exit_currencySignIs(Tree tree) { }
 	public void enter_threadPointer(Tree tree) { }
 	public void exit_threadPointer(Tree tree) { }
-	public void enter_constraintsParagraph(Tree tree) { }
-	public void exit_constraintsParagraph(Tree tree) { }
 	public void enter_notOnOverflow(Tree tree) { }
 	public void exit_notOnOverflow(Tree tree) { }
+	public void enter_constraintsParagraph(Tree tree) { }
+	public void exit_constraintsParagraph(Tree tree) { }
 	public void enter_tabPhrase(Tree tree) { }
 	public void exit_tabPhrase(Tree tree) { }
 	public void enter_typeName(Tree tree) { }
 	public void exit_typeName(Tree tree) { }
-	public void enter_className(Tree tree) { }
-	public void exit_className(Tree tree) { }
 	public void enter_onException(Tree tree) { }
 	public void exit_onException(Tree tree) { }
 	public void enter_divisionStart(Tree tree) { }
 	public void exit_divisionStart(Tree tree) { }
+	public void enter_className(Tree tree) { }
+	public void exit_className(Tree tree) { }
 	public void enter_segmentNumber(Tree tree) { }
 	public void exit_segmentNumber(Tree tree) { }
 	public void enter_concatenatedLiteral(Tree tree) { }
 	public void exit_concatenatedLiteral(Tree tree) { }
 	public void enter_securePhrase(Tree tree) { }
 	public void exit_securePhrase(Tree tree) { }
-	public void enter_fileSection(Tree tree) { }
-	public void exit_fileSection(Tree tree) { }
 	public void enter_computerName(Tree tree) { }
 	public void exit_computerName(Tree tree) { }
+	public void enter_fileSection(Tree tree) { }
+	public void exit_fileSection(Tree tree) { }
 	public void enter_factoryDefinition(Tree tree) { }
 	public void exit_factoryDefinition(Tree tree) { }
 	public void enter_cancelStatement(Tree tree) { }
 	public void exit_cancelStatement(Tree tree) { }
 	public void enter_procedureDivisionHeader(Tree tree) { }
 	public void exit_procedureDivisionHeader(Tree tree) { }
+	public void enter_basedClause(Tree tree) { }
+	public void exit_basedClause(Tree tree) { }
 	public void enter_crtStatusIs(Tree tree) { }
 	public void exit_crtStatusIs(Tree tree) { }
 	public void enter_passwordClause(Tree tree) { }
 	public void exit_passwordClause(Tree tree) { }
-	public void enter_basedClause(Tree tree) { }
-	public void exit_basedClause(Tree tree) { }
 	public void enter_operatorDefinition(Tree tree) { }
 	public void exit_operatorDefinition(Tree tree) { }
 	public void enter_generateStatement(Tree tree) { }
@@ -2212,14 +2197,14 @@ public void exit(Tree tree) {
 	public void exit_abbreviatedDisjunction(Tree tree) { }
 	public void enter_TOKEN_ELSE(Tree tree) { }
 	public void exit_TOKEN_ELSE(Tree tree) { }
-	public void enter_reportSection(Tree tree) { }
-	public void exit_reportSection(Tree tree) { }
 	public void enter_resetTraceStatement(Tree tree) { }
 	public void exit_resetTraceStatement(Tree tree) { }
-	public void enter_delegateIdParagraph(Tree tree) { }
-	public void exit_delegateIdParagraph(Tree tree) { }
+	public void enter_reportSection(Tree tree) { }
+	public void exit_reportSection(Tree tree) { }
 	public void enter_propertySpecifier(Tree tree) { }
 	public void exit_propertySpecifier(Tree tree) { }
+	public void enter_delegateIdParagraph(Tree tree) { }
+	public void exit_delegateIdParagraph(Tree tree) { }
 	public void enter_anyLengthClause(Tree tree) { }
 	public void exit_anyLengthClause(Tree tree) { }
 	public void enter_symbolicChars(Tree tree) { }
@@ -2232,12 +2217,12 @@ public void exit(Tree tree) {
 	public void exit_linkageSection(Tree tree) { }
 	public void enter_constantEntry_level78(Tree tree) { }
 	public void exit_constantEntry_level78(Tree tree) { }
-	public void enter_intermediateRoundingClause(Tree tree) { }
-	public void exit_intermediateRoundingClause(Tree tree) { }
 	public void enter_screenToClause(Tree tree) { }
 	public void exit_screenToClause(Tree tree) { }
 	public void enter_lengthPhrase(Tree tree) { }
 	public void exit_lengthPhrase(Tree tree) { }
+	public void enter_intermediateRoundingClause(Tree tree) { }
+	public void exit_intermediateRoundingClause(Tree tree) { }
 	public void enter_chainStatement(Tree tree) { }
 	public void exit_chainStatement(Tree tree) { }
 	public void enter_presentWhenClause(Tree tree) { }
@@ -2276,12 +2261,12 @@ public void exit(Tree tree) {
 	public void exit_bitwiseConjunction(Tree tree) { }
 	public void enter_propertyClause(Tree tree) { }
 	public void exit_propertyClause(Tree tree) { }
+	public void enter_qualifiedReportCounter(Tree tree) { }
+	public void exit_qualifiedReportCounter(Tree tree) { }
 	public void enter_valueOfFileId(Tree tree) { }
 	public void exit_valueOfFileId(Tree tree) { }
 	public void enter_groupUsageClause(Tree tree) { }
 	public void exit_groupUsageClause(Tree tree) { }
-	public void enter_qualifiedReportCounter(Tree tree) { }
-	public void exit_qualifiedReportCounter(Tree tree) { }
 	public void enter_cicsStatement(Tree tree) { }
 	public void exit_cicsStatement(Tree tree) { }
 	public void enter_classControlParagraph(Tree tree) { }
@@ -2326,10 +2311,10 @@ public void exit(Tree tree) {
 	public void exit_signCondition(Tree tree) { }
 	public void enter_cicsValue(Tree tree) { }
 	public void exit_cicsValue(Tree tree) { }
-	public void enter_enumName(Tree tree) { }
-	public void exit_enumName(Tree tree) { }
 	public void enter_compilerStatement(Tree tree) { }
 	public void exit_compilerStatement(Tree tree) { }
+	public void enter_enumName(Tree tree) { }
+	public void exit_enumName(Tree tree) { }
 	public void enter_classType(Tree tree) { }
 	public void exit_classType(Tree tree) { }
 	public void enter_validateStatusClause(Tree tree) { }
@@ -2352,20 +2337,20 @@ public void exit(Tree tree) {
 	public void exit_replacementTarget(Tree tree) { }
 	public void enter_lowPhrase(Tree tree) { }
 	public void exit_lowPhrase(Tree tree) { }
-	public void enter_labelRecords(Tree tree) { }
-	public void exit_labelRecords(Tree tree) { }
 	public void enter_rewriteStatement(Tree tree) { }
 	public void exit_rewriteStatement(Tree tree) { }
+	public void enter_labelRecords(Tree tree) { }
+	public void exit_labelRecords(Tree tree) { }
 	public void enter_value(Tree tree) { }
 	public void exit_value(Tree tree) { }
 	public void enter_TOKEN_EQUALS(Tree tree) { }
 	public void exit_TOKEN_EQUALS(Tree tree) { }
 	public void enter_displayDeviceFormat(Tree tree) { }
 	public void exit_displayDeviceFormat(Tree tree) { }
-	public void enter_releaseStatement(Tree tree) { }
-	public void exit_releaseStatement(Tree tree) { }
 	public void enter_copyOperandName(Tree tree) { }
 	public void exit_copyOperandName(Tree tree) { }
+	public void enter_releaseStatement(Tree tree) { }
+	public void exit_releaseStatement(Tree tree) { }
 	public void enter_bellClause(Tree tree) { }
 	public void exit_bellClause(Tree tree) { }
 	public void enter_methodName(Tree tree) { }

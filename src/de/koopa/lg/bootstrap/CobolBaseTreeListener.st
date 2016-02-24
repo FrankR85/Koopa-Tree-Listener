@@ -2,13 +2,8 @@ package $package$;
 
 import koopa.core.trees.Tree;
 import de.koopa.lg.treewalker.KoopaTreeHelper;
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
 
 public abstract class CobolBaseTreeListener<T> implements CobolTreeListener<T>{
-	private boolean isListening = true;
-	private int procedureDivisionCount = 0;
-	private static final Logger logger = LogManager.getLogger();
 	
 	public CobolBaseTreeListener() {	
 	}
@@ -29,16 +24,6 @@ $Mapping:{mapEntry |
 			default: return;
 		}
 	}
-	protected void checkProcedureDivisionCount() {
-		procedureDivisionCount++;
-		if (procedureDivisionCount > 1) {
-			isListening = false;
-		}
-	}
-	public boolean isListening() {
-		return isListening;
-	}
-
 
 $Mapping:{mapEntry | 
 	public void enter_$mapEntry$(Tree tree) { $closingCurlyBraclet$

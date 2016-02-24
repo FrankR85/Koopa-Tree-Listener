@@ -16,9 +16,6 @@ import java.util.Map;
 import koopa.cobol.grammar.CobolBaseGrammar;
 import koopa.cobol.grammar.CobolGrammar;
 import koopa.core.parsers.ParserCombinator;
-
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
 import org.stringtemplate.v4.ST;
 
 public class ListenerGenerator {
@@ -29,10 +26,8 @@ public class ListenerGenerator {
 	private final static String cobolNodeEnumName = "CobolNode";
 	private final static char stringTemplateDelimiter = '$';
 	private final static String packageDeclaration = "de.koopa.lg.treewalker";
-	private static final Logger logger = LogManager.getLogger();
 
 	public static void main(String[] args) throws Exception {
-		logger.info("Start generating TreeWalker");
 		ListenerGenerator generator = new ListenerGenerator();
 		generator.generate();
 	}

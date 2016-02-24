@@ -7,7 +7,5 @@ public interface CobolTreeListener<T> {
 
 	public void exit(Tree tree);
 
-	public boolean isListening();
-
 	public T getResult();
 }
